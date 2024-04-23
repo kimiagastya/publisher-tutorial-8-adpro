@@ -12,3 +12,6 @@ Publisher dan Subscriber terhubung pada message broker yang sama, memungkinkan t
 ## Subscriber Console ##
 ![Subscriber Console](img/Sub_Console.png)
 Screenshots di atas menampilkan alur pengiriman data dengan perantara message broker RabbitMQ. Ketika melakukan `cargo run` pada subscriber, maka subscriber siap menerima data dari publisher dan terlihat pada RabbitMQ, jumlah connection bertambah jadi 1 orang. Ketika dilakukan `cargo run` pada publisher, maka subscriber akan menerima dan memproses 5 data yang dikirimkan.
+## Spikes in RabbitMQ ##
+![Spikes in RabbitMQ](img/RMQSpikes.png)
+Spikes yang muncul pada grafik meesage rate di RabbitMQ atas menunjukkan message yang masuk ke subscriber. Spikes muncul setiap melakukan `cargo run` pada publisher, yaitu ketika publisher mengirimkan data ke subscriber.
